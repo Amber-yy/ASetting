@@ -27,6 +27,8 @@ struct ASettingData
 		isOk = asd.isOk;
 		fileName = asd.fileName;
 		values = asd.values;
+		addData = asd.addData;
+		addValue = asd.addValue;
 	}
 	bool isOk;
 	std::string fileName;
