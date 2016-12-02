@@ -11,13 +11,13 @@ All rights reserved.
 2.ini读写类能实现通过键和值来读写ini文件中的内容。
 3.所有功能的实现均不依赖于Windows API，所以理论上讲本文件可以实现跨平台。
 4.ini文件一行最多只能有1024个字符，否则会出现错误。
-5.仅支持ANSI格式和UTF-8无BOM格式。
+5.支持ANSI格式，UTF-8仅支持无BOM格式。
 
 当前版本：V1.0
 作者：余悦
 e-mail：1397011447@qq.com
 创建日期：2016年11月25日
-更新日期：2016年11月25日
+更新日期：2016年12月02日
 
 修正日志：
 
@@ -26,7 +26,6 @@ e-mail：1397011447@qq.com
 #pragma once
 
 #include <string>
-#include <map>
 #include <memory>
 
 struct ASettingData;
@@ -40,7 +39,8 @@ public:
 	explicit ASetting(const char *);
 	explicit ASetting(const std::string &);
 	const std::string &getValue(const std::string&, const std::string &) const;
-	void saveToFile();
+	bool setValue(const std::string&, const std::string &, const std::string&);
+	bool saveToFile();
 	~ASetting();
 private:
 	void readFromFile();
