@@ -4,7 +4,7 @@
 
 int main()
 {
-	ASetting as("e:/a.ini");
+	athena::ASetting as("e:/a.ini");
 	as.setValue("Test", "FontName", "233");
 	as.setValue("Test2", "Name", "555");
 

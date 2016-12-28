@@ -3,6 +3,8 @@
 #include <map>
 #include <vector>
 
+ATHENA_BEGIN
+
 struct line
 {
 	std::string data;
@@ -287,3 +289,5 @@ bool ASetting::saveToFile()
 
 	return true;
 }
+
+ATHENA_END

@@ -28,8 +28,11 @@ v1.1，修正底层数据表示的一个逻辑错误
 
 #include <string>
 #include <memory>
+#include "ACore.h"
 
 struct ASettingData;
+
+ATHENA_BEGIN
 
 class ASetting final
 {
@@ -49,3 +52,4 @@ private:
 	std::unique_ptr<ASettingData> data;
 };
 
+ATHENA_END
